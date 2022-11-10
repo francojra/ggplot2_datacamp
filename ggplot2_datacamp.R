@@ -210,3 +210,24 @@ ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +
        geom_point(size = 4) + 
        scale_color_brewer(palette = "Spectral")
 
+### Mudando formas
+
+data("diamonds")
+
+# Change the shape of markers 
+base_plot <- ggplot(diamonds, aes(price, carat)) +
+       geom_point(shape = 6)
+
+# shape = 1 makes the points circles. Run example(points) to see the shape for each number. 
+
+# Change the shape of markers based on a third column
+base_plot + 
+   geom_point(size = 2)
+
+# Change the shape radius
+base_plot + 
+   scale_radius(range = c(1, 6))
+
+# Change max shape area size
+base_plot + 
+   scale_size_area(max_size = 8)
