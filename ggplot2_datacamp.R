@@ -30,13 +30,30 @@ library(ggplot2) # Primeiro carregue o pacote
 ggplot(data, aes(x = x_column, y = y_column)) + 
        geom_line()
 
-# ggplot() creates a canvas to draw on. 
+### ggplot() creates a canvas to draw on. 
 
-# data is the data frame containing data for the plot. It contains columns named 
-# x_column and y_column.
+### data is the data frame containing data for the plot. It contains columns named 
+### x_column and y_column.
 
-# aes() matches columns of data to the aesthetics of the plot. Here,  x_column is used 
-# for the x-axis and y_column for the y-axis.
+### aes() matches columns of data to the aesthetics of the plot. Here,  x_column is used 
+### for the x-axis and y_column for the y-axis.
 
-# geom_line() adds a line geometry. That is, it draws a line plot connecting each data 
-# point in the dataset.
+### geom_line() adds a line geometry. That is, it draws a line plot connecting each data 
+### point in the dataset.
+
+# Geometrias, atributos e estéticas do ggplot2 ---------------------------------------------------------------------------------------------
+
+### Geometrias são as representações visuais dos dados. As geometrias comuns são pontos,
+### linhas, barras, histogramas, boxes e mapas. As propriedades visuais das geometrias,
+### como cor, tamanho e forma podem ser definidas como atributos ou estéticas (relacionadas
+### às variáveis x e y).
+
+### Atributos são valores fixos de propriedades visuais das geometrias. Por exemplo, se você
+### que estabelecer as cores de todos os pontos para vermelho, então você deveria estabelecer
+### o atributo de cor (color) para red. Esses atributos devem sempre ser definidos dentro da
+### função de geometria (geom).
+
+ggplot(data, aes(x = x_column, y = y_column)) +
+       geom_line(color = "red")
+
+
