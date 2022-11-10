@@ -190,3 +190,23 @@ base_plot + theme(legend.position = "bottom")
 # Place the legend into the plot area
 base_plot + theme(legend.position = c(0.1, 0.7))
 
+### Mudando cores
+
+# Change the outline color of a histogram geom
+ggplot(diamonds, aes(price)) + 
+       geom_histogram(color = "red")
+
+# Change the fill color of a histogram geom
+ggplot(diamonds, aes(price)) +
+       geom_histogram(fill = "blue")
+
+# Add a gray color scale
+ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +
+       geom_point(size = 4) +
+       scale_color_grey()
+
+# Change to other native color scales
+ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +
+       geom_point(size = 4) + 
+       scale_color_brewer(palette = "Spectral")
+
