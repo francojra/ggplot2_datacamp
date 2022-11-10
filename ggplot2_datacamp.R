@@ -167,3 +167,26 @@ ggplot(data, aes(x = x_column, y = y_column)) +
       geom_point() + 
       xlim(min, max) + 
       ylim(min, max)
+
+### Manipulando rótulos e legendas
+
+# A scatter plot that will be used throughout these examples
+base_plot <- ggplot(data, aes(x = x_column, y = y_column, color = color_column)) +   
+                    geom_point()
+
+# Adding labels on the plot
+base_plot + labs(x = 'X Axis Label', y = 'Y Axis Label', title = 'Plot title', 
+                 subtitle = 'Plot subtitle', caption = 'Image by author')
+
+# When using any aesthetics
+base_plot + labs(color = "Diamond depth", size = "Diamond table")
+
+# Remove the legend
+base_plot + theme(legend.position = "none")
+
+# Change legend position outside of the plot — You can also pass "top", "right", or "left"
+base_plot + theme(legend.position = "bottom")
+
+# Place the legend into the plot area
+base_plot + theme(legend.position = c(0.1, 0.7))
+
