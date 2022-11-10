@@ -231,3 +231,21 @@ base_plot +
 # Change max shape area size
 base_plot + 
    scale_size_area(max_size = 8)
+
+### Mudando fontes
+
+# Change font family
+base_plot + 
+   theme(text = element_text(family = "serif"))
+
+# Change font size
+base_plot + 
+   theme(text = element_text(size = 20))
+
+# Change text angle
+base_plot + 
+   theme(text = element_text(angle = 90))
+
+# Change alignment with hjust and vjust
+base_plot + 
+   theme(text = element_text(hjust = 0.7, vjust = 0.4))
