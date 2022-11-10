@@ -17,6 +17,26 @@
 
 # A Gramática de Gráficos ------------------------------------------------------------------------------------------------------------------
 
+### A gramática de gráficos é um framework para especificar os componentes de um gráfico.
+### Essa abordagem de construir gráficos em um caminho modular permite um alto nível de 
+### flexibilidade para criar abrangentes formas de visualização. O framework pode tornar
+### a produção de gráficos mais fácil porque você apenas precisa declarar o que você quer
+### no gráfico - o software, como o ggplot2 do R, tem que descobrir como desenhar a figura.
 
+# Criando seu primeiro gráfico com uma simples linha de código -----------------------------------------------------------------------------
 
+library(ggplot2) # Primeiro carregue o pacote
 
+ggplot(data, aes(x = x_column, y = y_column)) + 
+       geom_line()
+
+# ggplot() creates a canvas to draw on. 
+
+# data is the data frame containing data for the plot. It contains columns named 
+# x_column and y_column.
+
+# aes() matches columns of data to the aesthetics of the plot. Here,  x_column is used 
+# for the x-axis and y_column for the y-axis.
+
+# geom_line() adds a line geometry. That is, it draws a line plot connecting each data 
+# point in the dataset.
