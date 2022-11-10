@@ -90,6 +90,32 @@ ggplot(data, aes(x = x_column, y = y_column)) +
 ggplot(data, aes(x = x_column, y = y_column, fill = z_column)) +
        geom_area()
 
+# Visualizar relações ----------------------------------------------------------------------------------------------------------------------
 
+# Create a scatter plot with ggplot2
+ggplot(data, aes(x = x_column, y = y_column)) +
+       geom_point()
+
+# Create a bar plot with ggplot2 
+ggplot(data, aes(x = x_column, y = y_column)) + 
+       geom_col()
+
+### Nota: Troque geom_col() por geom_bar() para calcular as alturas das barras 
+### a partir das contagens dos valores x.
+
+# Create a lollipop chart with ggplot2
+ggplot(data, aes(x = x_column, y = y_column)) +
+       geom_point() + 
+       geom_segment(aes(x = x_column, xend = x_column, y = 0, 
+                        yend = y_column))
+
+# Create a bubble plot with ggplot2
+ggplot(data, aes(x = x_column, y = y_column, size = size_column)) +
+       geom_point(alpha = 0.7) +
+       scale_size_area()
+
+### Nota: Num gráfico de bolhas, as "bolhas" podem sobrepor-se, o que pode ser resolvido 
+### ajustando o atributo de transparência, alpha. scale_size_area() faz com que os 
+### pontos sejam proporcionais aos valores em size_column.
 
 
