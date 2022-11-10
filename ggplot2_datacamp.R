@@ -118,4 +118,21 @@ ggplot(data, aes(x = x_column, y = y_column, size = size_column)) +
 ### ajustando o atributo de transparência, alpha. scale_size_area() faz com que os 
 ### pontos sejam proporcionais aos valores em size_column.
 
+# Visualizar distribuições -----------------------------------------------------------------------------------------------------------------
+
+# Create a histogram with ggplot2
+ggplot(data, aes(x_column)) + 
+       geom_histogram(bins = 15)
+
+# Create a box plot with ggplot2
+ggplot(data, aes(x = x_column, y = y_column)) +
+       geom_boxplot()
+
+# Create a violin plot with ggplot2
+ggplot(data, aes(x = x_column, y = y_column, fill = z_value)) +
+       geom_violin()
+
+# Create a density plot with ggplot2
+ggplot(data, aes(x = x_column)) +
+       geom_density()
 
