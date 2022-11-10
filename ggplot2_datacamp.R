@@ -74,6 +74,21 @@ ggplot(data, aes(x = x_column, y = y_column)) +
 ### size set or map the size or width
 ### alpha set or map the transparency
 
+# As visualizações mais comuns no ggplot2 --------------------------------------------------------------------------------------------------
+
+### Capturar uma tendência
+
+# Create a multi-line plot with ggplot2
+ggplot(data, aes(x_column, y_column, color = color_column)) +   
+       geom_line()
+
+# Create an area chart with ggplot2
+ggplot(data, aes(x = x_column, y = y_column)) +
+       geom_area()
+
+# Create a stacked area chart with ggplot2
+ggplot(data, aes(x = x_column, y = y_column, fill = z_column)) +
+       geom_area()
 
 
 
