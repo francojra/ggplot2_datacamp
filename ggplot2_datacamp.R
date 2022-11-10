@@ -263,3 +263,29 @@ base_plot + theme_dark()
 
 # Classic theme
 base_plot + theme_classic()
+
+### Facetamento
+
+#### Você pode quebrar o seu gráfico em múltiplos painéis, permitindo você comparar
+#### diferentes porções do seu conjunto de dados lado a lado. Por exemplo, você
+#### pode mostrar dados para cada categoria de uma variável categórica em um único
+#### painel.
+
+# Facet the figures into a rectangular layout of two columns
+base_plot + facet_wrap(vars(cut), ncol = 2)
+
+# Facet the figures into a rectangular layout of two rows
+base_plot + facet_wrap(vars(cut), nrow = 2)
+
+# Facet into a rectangular layout but give axes free ranges (variable plot dimensions):
+base_plot + facet_wrap(vars(cut), scales = "free")
+
+# Facet by both columns and rows with facet_grid
+base_plot + 
+   facet_grid(rows = vars(clarity), cols = vars(cut),
+              space = "free", scales = "free")
+
+
+
+
+
