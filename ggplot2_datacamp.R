@@ -249,3 +249,17 @@ base_plot +
 # Change alignment with hjust and vjust
 base_plot + 
    theme(text = element_text(hjust = 0.7, vjust = 0.4))
+
+### Mudando temas
+
+# Minimal theme
+base_plot + theme_minimal()
+
+# White background
+base_plot + theme_bw()
+
+# Dark theme (high contrast)
+base_plot + theme_dark()
+
+# Classic theme
+base_plot + theme_classic()
