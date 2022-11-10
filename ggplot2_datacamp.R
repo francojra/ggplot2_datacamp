@@ -65,7 +65,14 @@ ggplot(data, aes(x = x_column, y = y_column)) +
 ggplot(data, aes(x = x_column, y = y_column)) +
        geom_line(aes(color = z_column))
 
+### Aqui estão os mapeamentos estéticos mais comuns e os atributos que você encontrará no ggplot2
 
+### x set or map the x-axis coordinate
+### y set or map the x-axis coordinate
+### color set or map the color or edge color
+### fill set or map the interior (fill) color
+### size set or map the size or width
+### alpha set or map the transparency
 
 
 
