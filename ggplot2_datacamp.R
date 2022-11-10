@@ -136,3 +136,34 @@ ggplot(data, aes(x = x_column, y = y_column, fill = z_value)) +
 ggplot(data, aes(x = x_column)) +
        geom_density()
 
+# Customizando visualizações com ggplot2 ---------------------------------------------------------------------------------------------------
+
+### Manipulando eixos
+
+# Switching to logarithmic scale
+ggplot(data, aes(x = x_column, y = y_column)) + 
+      geom_point() +
+      scale_x_log10() # or scale_y_log10
+
+# Reverse the direction of the axis
+ggplot(data, aes(x = x_column, y = y_column)) + 
+      geom_point() + 
+      scale_x_reverse()
+
+# Square root scale
+ggplot(data, aes(x = x_column, y = y_column)) +
+       geom_point() +
+       scale_x_sqrt()
+
+# Changing axis limits without clipping
+ggplot(data, aes(x = x_column, y = y_column)) +
+      geom_point() +
+      coord_cartesian(xlim = c(min, max), 
+                      ylim = c(min, max),
+                      clip = "off")
+
+# Changing axis limits with clipping  
+ggplot(data, aes(x = x_column, y = y_column)) + 
+      geom_point() + 
+      xlim(min, max) + 
+      ylim(min, max)
