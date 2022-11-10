@@ -56,4 +56,18 @@ ggplot(data, aes(x = x_column, y = y_column)) +
 ggplot(data, aes(x = x_column, y = y_column)) +
        geom_line(color = "red")
 
+### Aesthetic são valores visuais das propriedades das geometrias que dependem dos dados.
+### Por exemplo, se você quer a cor dos pontos dependendo dos valores na coluna_z, então
+### você deverá mapear a coluna z para obter cor. Essa estética pode ser definida dentro
+### da geometria (geom) ou dentro da função do ggplot.
+ 
+# Create a lineplot where lines are colored according to another in ggplot2
+ggplot(data, aes(x = x_column, y = y_column)) +
+       geom_line(aes(color = z_column))
+
+
+
+
+
+
 
